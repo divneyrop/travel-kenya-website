@@ -21,19 +21,21 @@
         padding: 70px 15px;
     }
 
+    /* FIX 5: wider container for better layout */
     .container {
-        width: 92%;
+        width: 95%;
         padding: 20px;
+    }
+
+    /* FIX 1: force scroll instead of compression */
+    table {
+        min-width: 800px;
+        font-size: 12px;
     }
 
     th, td {
         padding: 8px;
         font-size: 13px;
-    }
-
-    table {
-        min-width: 600px;
-        font-size: 12px;
     }
 }
 
@@ -151,13 +153,12 @@ a:hover {
 ========================= */
 .table-wrapper {
     overflow-x: auto;
+    width: 100%;
 }
 
 table {
-    width: 100%;
+    min-width: 800px; /* FIX: forces scroll instead of squeezing */
     border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
 th {
@@ -165,12 +166,14 @@ th {
     color: #939393fa;
     padding: 12px;
     font-weight: 600;
+    text-align: left;
 }
 
 td {
     padding: 12px;
-    border-bottom: 1px solid #939393fa;
-    text-align: center;
+    border-bottom: 1px solid rgba(147, 147, 147, 0.3); /* FIX 4 */
+    text-align: left; /* FIX 2 */
+    vertical-align: top;
     font-size: 14px;
 }
 
@@ -182,6 +185,12 @@ table tr {
 table tr:hover {
     background: rgba(159, 94, 3, 0.12);
     transform: scale(1.01);
+}
+
+/* FIX 3: control description column */
+td:nth-child(4) {
+    max-width: 260px;
+    line-height: 1.4;
 }
 
 /* =========================
