@@ -26,7 +26,13 @@
         padding: 20px;
     }
 
+    th, td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
     table {
+        min-width: 600px;
         font-size: 12px;
     }
 }
@@ -143,6 +149,10 @@ a:hover {
 /* =========================
    TABLE (clean booking style)
 ========================= */
+.table-wrapper {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
