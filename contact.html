@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="travel_style.css">
+</head>
+<body>
+
+<header>
+    <h1>Plan Your Kenyan Adventure</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <form>
+        <h2>Start Planning Your Trip</h2>
+        <p>Fill in your details and preferences, and we’ll help you create the perfect travel experience.</p>
+
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="e.g. Divney Rop" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="e.g. divneyrop@email.com" required>
+
+        <label>Preferred Travel Date</label>
+        <input type="date" name="date" required>
+
+        <label>Destination of Interest</label>
+        <select name="destination" required>
+            <option value="">-- Select a destination --</option>
+            <option>Maasai Mara</option>
+            <option>Diani Beach</option>
+            <option>Mount Kenya</option>
+            <option>Lake Nakuru</option>
+            <option>Amboseli National Park</option>
+            <option>Lamu Island</option>
+            <option>Tsavo National Park</option>
+            <option>Hell's Gate</option>
+            <option>Mount Longonot</option>
+        </select>
+
+        <label>Type of Experience</label>
+        <select name="experience" required>
+            <option value="">-- Choose an experience --</option>
+            <option>Wildlife Safari</option>
+            <option>Beach Holiday</option>
+            <option>Adventure / Hiking</option>
+            <option>Cultural Experience</option>
+            <option>Relaxation</option>
+        </select>
+
+        <label>Additional Details</label>
+        <textarea name="message" rows="5" placeholder="Tell us more about your travel plans...." required></textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2026 Explore Kenya</p>
+</footer>
+
+</body>
+</html>
