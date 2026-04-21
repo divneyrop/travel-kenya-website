@@ -1,113 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Destinations</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="travel_style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations — Explore Kenya</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-    <h1>Top Destinations</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="contact.html">Contact</a>
-        <a href="gallery.html">Gallery</a>
-    </nav>
-</header>
-
-<div class="container">
-    <h2>Top Travel Destinations in Kenya</h2>
-    <div class="table-wrapper">
-    <table>
-        <tr>
-            <th>Destination</th>
-            <th>Region</th>
-            <th>Main Attraction</th>
-            <th>Description</th>
-            <th>Best Time to Visit</th>
-        </tr>
-
-        <tr>
-            <td>Maasai Mara</td>
-            <td>Narok</td>
-            <td>Wildlife Safari & Great Migration</td>
-            <td>Famous for the annual wildebeest migration and abundant wildlife.</td>
-            <td>July – October</td>
-        </tr>
-
-        <tr>
-            <td>Diani Beach</td>
-            <td>Coast</td>
-            <td>White Sand Beaches & Water Sports</td>
-            <td>Known for its crystal-clear waters and relaxing beach atmosphere.</td>
-            <td>December – March</td>
-        </tr>
-
-        <tr>
-            <td>Mount Kenya</td>
-            <td>Central</td>
-            <td>Hiking & Scenic Views</td>
-            <td>A popular destination for trekking with stunning alpine landscapes.</td>
-            <td>January – February</td>
-        </tr>
-
-        <tr>
-            <td>Lake Nakuru</td>
-            <td>Rift Valley</td>
-            <td>Flamingos & Rhino Sanctuary</td>
-            <td>Home to flamingos and one of Kenya’s key rhino conservation parks.</td>
-            <td>Year-round</td>
-        </tr>
-
-        <tr>
-            <td>Amboseli National Park</td>
-            <td>Kajiado</td>
-            <td>Elephants & Kilimanjaro Views</td>
-            <td>Offers iconic views of Mount Kilimanjaro and large elephant herds.</td>
-            <td>June – October</td>
-        </tr>
-
-        <tr>
-            <td>Lamu Island</td>
-            <td>Coast</td>
-            <td>Swahili Culture & History</td>
-            <td>A UNESCO heritage site rich in Swahili architecture and culture.</td>
-            <td>November – March</td>
-        </tr>
-
-        <tr>
-            <td>Tsavo National Park</td>
-            <td>Eastern</td>
-            <td>Vast Wildlife Reserve</td>
-            <td>One of the largest parks in Africa with diverse landscapes and wildlife.</td>
-            <td>May – October</td>
-        </tr>
-
-        <tr>
-            <td>Hell's Gate</td>
-            <td>Naivasha</td>
-            <td>Hiking & Rock Climbing</td>
-            <td>Unique park where visitors can walk or cycle among wildlife.</td>
-            <td>Year-round</td>
-        </tr>
-        
-        <tr>
-            <td>Mount Longonot</td>
-            <td>Rift Valley</td>
-            <td>Volcanic Hiking Trail</td>
-            <td>A dormant volcano offering scenic crater hikes and panoramic views.</td>
-            <td>Year-round</td>
-        </tr>
-
-    </table>
+  <nav>
+    <div class="nav-logo">Explore <span>Kenya</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html" class="active">Destinations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
     </div>
-</div>
+  </nav>
 
-<footer>
-    <p>&copy; 2026 Explore Kenya</p>
-</footer>
+  <div class="page-header">
+    <p class="section-label">Where to Go</p>
+    <h1>Top Travel<br>Destinations in Kenya</h1>
+    <p>Nine remarkable places — from world-famous game reserves to UNESCO heritage coastlines.</p>
+  </div>
+
+  <!-- BUG FIX 7 applied — table replaced with card grid -->
+  <main>
+    <div class="destinations-grid">
+
+      <div class="dest-card">
+        <div class="dest-card-head">
+          <h2>Maasai Mara</h2>
+          <div class="region">Narok</div>
+        </div>
+        <div class="dest-card-body">
+          <div class="attraction">Wildlife Safari &amp; Great Migration</div>
+          <p>Famous for the annual wildebeest migration and abundant wildlife including all of Africa's Big Five.</p>
+        </div>
+        <div class="dest-card-footer">
+          <span>Best time:</span>
+          <span class="badge">July – October</span>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-card-head">
+          <h2>Diani Beach</h2>
+          <div class="region">Coast</div>
+        </div>
+        <div class="dest-card-body">
+          <div class="attraction">White Sand Beaches &amp; Water Sports</div>
+          <p>Crystal-clear waters and a relaxed beach atmosphere make Diani one of East Africa's finest coastal escapes.</p>
+        </div>
+        <div class="dest-card-footer">
+          <span>Best time:</span>
+          <span class="badge">December – March</span>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-card-head">
+          <h2>Mount Kenya</h2>
+          <div class="region">Central</div>
+        </div>
+        <div class="dest-card-body">
+          <div class="attraction">Hiking &amp; Scenic Views</div>
+          <p>A popular trekking destination offering stunning alpine landscapes and Africa's second-highest summit.</p>
+        </div>
+        <div class="dest-card-footer">
+          <span>Best time:</span>
+          <span class="badge">January – February</span>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-card-head">
+          <h2>Lake Nakuru</h2>
+          <div class="region">Rift Valley</div>
+        </div>
+        <div class="dest-card-body">
+          <div class="attraction">Flamingos &amp; Rhino Sanctuary</div>
+          <p>Home to vast flocks of flamingos and one of Kenya's key rhino conservation parks.</p>
+        </div>
+        <div class="dest-card-footer">
+          <span>Best time:</span>
+          <span class="badge">Year-round</span>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-card-head">
+          <h2>Amboseli National Park</h2>
+          <div class="region">Kajiado</div>
+        </div>
+        <div class="dest-card-body">
+          <div class="attraction">Elephants &amp; Kilimanjaro Views</div>
+          <p>Offers iconic views of Mount Kilimanjaro across the border and some of Kenya's largest elephant herds.</p>
+        </div>
+        <div class="dest-card-footer">
+          <span>Best time:</span>
+          <span class="badge">June – October</span>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-card-head">
+          <h2>Lamu Island</h2>
+          <div class="region">Coast</div>
+        </div>
+        <div class="dest-card-body">
+          <div class="attraction">Swahili Culture &amp; History</div>
+          <p>A UNESCO World Heritage site rich in Swahili architecture, dhow sailing, and centuries of coastal culture.</p>
+        </div>
+        <div class="dest-card-footer">
+          <span>Best time:</span>
+          <span class="badge">November – March</span>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-card-head">
+          <h2>Tsavo National Park</h2>
+          <div class="region">Eastern</div>
+        </div>
+        <div class="dest-card-body">
+          <div class="attraction">Vast Wildlife Reserve</div>
+          <p>One of the largest parks in Africa, with dramatic red-dust landscapes, diverse ecosystems, and prolific wildlife.</p>
+        </div>
+        <div class="dest-card-footer">
+          <span>Best time:</span>
+          <span class="badge">May – October</span>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-card-head">
+          <h2>Hell's Gate</h2>
+          <div class="region">Naivasha</div>
+        </div>
+        <div class="dest-card-body">
+          <div class="attraction">Hiking &amp; Rock Climbing</div>
+          <p>Unique gorge park where visitors can walk or cycle among wildlife — no vehicle required.</p>
+        </div>
+        <div class="dest-card-footer">
+          <span>Best time:</span>
+          <span class="badge">Year-round</span>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-card-head">
+          <h2>Mount Longonot</h2>
+          <div class="region">Rift Valley</div>
+        </div>
+        <div class="dest-card-body">
+          <div class="attraction">Volcanic Hiking Trail</div>
+          <p>A dormant volcano offering a scenic crater rim hike and sweeping panoramic views of the Great Rift Valley.</p>
+        </div>
+        <div class="dest-card-footer">
+          <span>Best time:</span>
+          <span class="badge">Year-round</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Explore Kenya</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
 
 </body>
 </html>

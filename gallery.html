@@ -1,56 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Gallery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="travel_style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Explore Kenya</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="gallery-page">
 
-<header>
-    <h1>Gallery</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="contact.html">Contact</a>
-        <a href="gallery.html">Gallery</a>
-    </nav>
-</header>
-
-<div class="container">
-    <h2>Explore Kenya in Pictures</h2>
-
-    <div class="gallery">
-        <img src="gallery/travel_safari.jpg" alt="Safari">
-        <img src="gallery/kenya_beach.jpg" alt="Beach">
-        <img src="gallery/kenya_mountains.jpg" alt="Mountain">
-        <img src="gallery/travel_kenya.jpg" alt="Wildlife">
-        <img src="gallery/travel_sunset.jpeg" alt="Sunset">
-        <img src="gallery/kenya_city.jpg" alt="City">
-        <img src="gallery/travel_kilimanjaro.jpeg" alt="Kilimanjaro">
-        <img src="gallery/giraffes-nairobi.jpg" alt="Giraffes">
-        <img src="gallery/Nairobi-City.jpg" alt="Night Sky">
-        <img src="gallery/kenya_waterfall.jpeg" alt="Waterfall">
-        <img src="gallery/kenya_monument.jpg" alt="Monument">
-        <img src="gallery/text-section-kenya.jpg" alt="street_art">
-        <img src="gallery/kenyan_food.jpg" alt="Kenyan Food">
-        <img src="gallery/Masai-tribesmen-Kenya.avif" alt="Masai Tribesmen">
-        <img src="gallery/Kenya-spiagge.jpg" alt="more_beaches">
-        <img src="gallery/food_kenya.jpeg" alt="Kenyan Cuisine">
-        <img src="gallery/masai-mara-kenya.gif" alt="Masai Mara">
-        <img src="gallery/sunset_elephants.jpg" alt="Sunset Elephants">
-        <img src="gallery/kenya-lodge.jpg" alt="Kenyan Lodges">
-        <img src="gallery/Mombasa-Kenya-12.jpg" alt="Mombasa Beach">
-        <img src="gallery/kenya_mara_hotels.webp" alt="Mara Hotels">
-        <img src="gallery/kenya_wildlife.jpg" alt="Kenyan Wildlife">
-        <img src="gallery/kenyan_foods.webp" alt="Kenyan Foods">
-        <img src="gallery/more_food.jpg" alt="More Kenyan Foods">
+  <nav>
+    <div class="nav-logo">Explore <span>Kenya</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
     </div>
-</div>
+  </nav>
 
-<footer>
-    <p>&copy; 2026 Explore Kenya</p>
-</footer>
+  <div class="page-header">
+    <p class="section-label">Visual Journey</p>
+    <h1>Kenya in<br>Pictures</h1>
+    <p>Click any image to view it in full size.</p>
+  </div>
+
+  <!-- BUG FIX 8 applied — masonry column grid instead of vertical block list -->
+  <div class="gallery-grid">
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/sunset_elephants.jpg" alt="Elephants at sunset" loading="lazy" />
+      <div class="overlay"><span>Elephants at sunset</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/travel_safari.jpg" alt="Safari" loading="lazy" />
+      <div class="overlay"><span>Safari</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/kenya_beach.jpg" alt="Kenyan Beach" loading="lazy" />
+      <div class="overlay"><span>Kenyan Beach</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/giraffes-nairobi.jpg" alt="Giraffes near Nairobi" loading="lazy" />
+      <div class="overlay"><span>Giraffes near Nairobi</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/kenya_mountains.jpg" alt="Mountain landscapes" loading="lazy" />
+      <div class="overlay"><span>Mountain landscapes</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/Masai-tribesmen-Kenya.avif" alt="Maasai tribesmen" loading="lazy" />
+      <div class="overlay"><span>Maasai tribesmen</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/travel_kenya.jpg" alt="Kenyan wildlife" loading="lazy" />
+      <div class="overlay"><span>Kenyan wildlife</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/travel_sunset.jpeg" alt="Sunset" loading="lazy" />
+      <div class="overlay"><span>Sunset</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/kenya_city.jpg" alt="Kenyan city" loading="lazy" />
+      <div class="overlay"><span>Kenyan city</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/travel_kilimanjaro.jpeg" alt="Kilimanjaro view" loading="lazy" />
+      <div class="overlay"><span>Kilimanjaro view</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/Nairobi-City.jpg" alt="Nairobi city lights" loading="lazy" />
+      <div class="overlay"><span>Nairobi city lights</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/kenya_waterfall.jpeg" alt="Kenyan waterfall" loading="lazy" />
+      <div class="overlay"><span>Kenyan waterfall</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/kenya_monument.jpg" alt="Kenyan monument" loading="lazy" />
+      <div class="overlay"><span>Kenyan monument</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/text-section-kenya.jpg" alt="Street art" loading="lazy" />
+      <div class="overlay"><span>Street art</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/kenyan_food.jpg" alt="Kenyan food" loading="lazy" />
+      <div class="overlay"><span>Kenyan food</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/Kenya-spiagge.jpg" alt="Kenyan beaches" loading="lazy" />
+      <div class="overlay"><span>Kenyan beaches</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/food_kenya.jpeg" alt="Kenyan cuisine" loading="lazy" />
+      <div class="overlay"><span>Kenyan cuisine</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/masai-mara-kenya.gif" alt="Maasai Mara" loading="lazy" />
+      <div class="overlay"><span>Maasai Mara</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/kenya-lodge.jpg" alt="Kenyan lodge" loading="lazy" />
+      <div class="overlay"><span>Kenyan lodge</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/Mombasa-Kenya-12.jpg" alt="Mombasa beach" loading="lazy" />
+      <div class="overlay"><span>Mombasa beach</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/kenya_mara_hotels.webp" alt="Mara hotels" loading="lazy" />
+      <div class="overlay"><span>Mara hotels</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/kenya_wildlife.jpg" alt="Kenyan wildlife" loading="lazy" />
+      <div class="overlay"><span>Kenyan wildlife</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/kenyan_foods.webp" alt="Kenyan foods" loading="lazy" />
+      <div class="overlay"><span>Kenyan foods</span></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://divneyrop.github.io/travel-kenya-website/gallery/more_food.jpg" alt="More Kenyan food" loading="lazy" />
+      <div class="overlay"><span>More Kenyan food</span></div>
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX (BUG FIX 10) -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <footer>
+    <p>© 2026 Explore Kenya</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox-caption').textContent = img.alt;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(e) {
+      if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox({}); });
+  </script>
 
 </body>
 </html>

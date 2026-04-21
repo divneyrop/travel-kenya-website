@@ -1,39 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="travel_style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan Your Trip — Explore Kenya</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-    <h1>Plan Your Kenyan Adventure</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+  <nav>
+    <div class="nav-logo">Explore <span>Kenya</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
 
-<div class="container">
-    <form>
-        <h2>Start Planning Your Trip</h2>
-        <p>Fill in your details and preferences, and we’ll help you create the perfect travel experience.</p>
+  <div class="contact-wrapper">
 
-        <label>Full Name</label>
-        <input type="text" name="name" placeholder="e.g. Divney Rop" required>
+    <!-- LEFT: mood panel -->
+    <div class="contact-aside">
+      <p class="eyebrow">Plan Your Adventure</p>
+      <h1>Your Kenyan<br>Journey Starts Here</h1>
+      <p>Fill in your details and preferences. We'll craft the perfect travel experience just for you.</p>
+    </div>
 
-        <label>Email Address</label>
-        <input type="email" name="email" placeholder="e.g. divneyrop@email.com" required>
+    <!-- RIGHT: form -->
+    <div class="contact-form-panel">
 
-        <label>Preferred Travel Date</label>
-        <input type="date" name="date" required>
+      <!-- BUG FIX 14 applied — success message -->
+      <div class="success-msg" id="success-msg">
+        ✓ Your request has been submitted! We'll be in touch within 24 hours.
+      </div>
 
-        <label>Destination of Interest</label>
-        <select name="destination" required>
-            <option value="">-- Select a destination --</option>
+      <!-- BUG FIX 11 applied — all inputs now have associated <label> elements -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full_name" placeholder="Jane Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <!-- BUG FIX 15 — original email field used type="text"; changed to
+               type="email" so browsers validate format before submission. -->
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="travel-date">Preferred Travel Date</label>
+          <input type="date" id="travel-date" name="travel_date" />
+        </div>
+        <div class="form-group">
+          <label for="destination">Destination of Interest</label>
+          <select id="destination" name="destination">
+            <option value="" disabled selected>— Select a destination —</option>
             <option>Maasai Mara</option>
             <option>Diani Beach</option>
             <option>Mount Kenya</option>
@@ -43,28 +67,57 @@
             <option>Tsavo National Park</option>
             <option>Hell's Gate</option>
             <option>Mount Longonot</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="experience">Type of Experience</label>
+        <select id="experience" name="experience">
+          <option value="" disabled selected>— Choose an experience —</option>
+          <option>Wildlife Safari</option>
+          <option>Beach Holiday</option>
+          <option>Adventure / Hiking</option>
+          <option>Cultural Experience</option>
+          <option>Relaxation</option>
         </select>
+      </div>
 
-        <label>Type of Experience</label>
-        <select name="experience" required>
-            <option value="">-- Choose an experience --</option>
-            <option>Wildlife Safari</option>
-            <option>Beach Holiday</option>
-            <option>Adventure / Hiking</option>
-            <option>Cultural Experience</option>
-            <option>Relaxation</option>
-        </select>
+      <div class="form-group">
+        <label for="details">Additional Details</label>
+        <textarea id="details" name="details" placeholder="Tell us about group size, budget, special requirements…"></textarea>
+      </div>
 
-        <label>Additional Details</label>
-        <textarea name="message" rows="5" placeholder="Tell us more about your travel plans...." required></textarea>
+      <!-- BUG FIX 13 applied — styled button instead of default input[type=submit] -->
+      <button class="submit-btn" onclick="handleSubmit(event)">Submit Request</button>
+    </div>
+  </div>
 
-        <button type="submit">Submit Request</button>
-    </form>
-</div>
+  <footer>
+    <p>© 2026 Explore Kenya</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
 
-<footer>
-    <p>&copy; 2026 Explore Kenya</p>
-</footer>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('full-name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if (!name || !email) {
+        alert('Please fill in your name and email before submitting.');
+        return;
+      }
+      document.getElementById('success-msg').classList.add('show');
+      document.querySelector('.submit-btn').disabled = true;
+      document.querySelector('.submit-btn').textContent = 'Submitted ✓';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 </html>

@@ -1,67 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Explore Kenya</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="travel_style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Kenya</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
-    <h1>Explore Kenya</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="contact.html">Contact</a>
-        <a href="gallery.html">Gallery</a>
-    </nav>
-</header>
 
-<section class="hero">
-    <h2>Discover Nature, Wildlife & Culture</h2>
-    <p>Experience Kenya through unforgettable safaris, beaches, and mountain adventures.</p>
+  <!-- ── NAVIGATION ─────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-logo">Explore <span>Kenya</span></div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-</section>
-<div class="container">
-    <h2>Why Explore Kenya?</h2>
-    <p>
-        <a href="gallery.html">Kenya</a> is one of Africa’s most iconic travel destinations, known for its world-famous safaris,
-        stunning coastline, and vibrant cultures. Whether you're seeking adventure, relaxation, or wildlife
-        encounters, Kenya offers an unforgettable experience for every traveler.
-    </p>
-</div>
+  <!-- ── HERO ───────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">East Africa's Crown Jewel</span>
+      <h1>Discover <em>Wild</em><br>Kenya</h1>
+      <p class="hero-sub">
+        Safaris, coastlines, highlands, and culture — an unforgettable journey
+        awaits across one of Africa's most iconic destinations.
+      </p>
+      <a href="contact.html" class="btn">Start Planning</a>
+    </div>
+  </header>
 
-<div class="container">
-    <h2>Featured Experiences</h2>
+  <!-- ── WHY KENYA ──────────────────────────────────────────── -->
+  <section id="why">
+    <div class="why-grid">
+      <div>
+        <p class="section-label">Why Kenya</p>
+        <h2 class="section-title">Africa's Most<br>Iconic Destination</h2>
+        <p class="section-body">
+          Kenya is home to world-famous safaris, a stunning Indian Ocean coastline,
+          and vibrant, diverse cultures. Whether you're chasing the Great Migration,
+          hiking Mount Kenya's peaks, or relaxing on Diani Beach — every journey here
+          becomes a story worth telling.
+        </p>
+        <br />
+        <a href="destinations.html" class="btn" style="margin-top:.5rem">Explore Destinations</a>
+      </div>
+      <div class="why-img">
+        <img
+          src="https://divneyrop.github.io/travel-kenya-website/gallery/giraffes-nairobi.jpg"
+          alt="Giraffes at sunset near Nairobi"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
 
-    <ul>
-        <li><strong>Wildlife Safaris</strong> – Home to the Great Migration in Maasai Mara and Africa’s Big Five</li>
-        <li><strong>Iconic Landscapes</strong> – From the savannahs of Amboseli to the Rift Valley and Mount Kenya</li>
-        <li><strong>Coastal Beaches</strong> – White sands and turquoise waters in Diani, Watamu, and Lamu</li>
-        <li><strong>Rich Culture</strong> – Diverse tribes, traditions, music, and heritage experiences</li>
-        <li><strong>Adventure Tourism</strong> – Hiking, camping, cycling, and volcanic landscapes like Hell’s Gate</li>
-        <li><strong>Kenyan Cuisine</strong> – Traditional dishes like nyama choma, ugali, samosas, and coastal seafood</li>
-    </ul>
+  <!-- ── FEATURES ───────────────────────────────────────────── -->
+  <section id="features">
+    <p class="section-label">Featured Experiences</p>
+    <h2 class="section-title">What Awaits You</h2>
 
-    <p>
-        Discover these experiences in detail on our 
-        <a href="destinations.html">Destinations page</a>.
-    </p>
-</div>
+    <!-- BUG FIX 4 applied — was a flat <ul>; now a proper responsive card grid -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🦁</div>
+        <h3>Wildlife Safaris</h3>
+        <p>Witness the Great Migration in Maasai Mara and encounter Africa's Big Five up close.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏔️</div>
+        <h3>Iconic Landscapes</h3>
+        <p>From Amboseli's savannahs to the Rift Valley and the snows of Mount Kenya.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏖️</div>
+        <h3>Coastal Beaches</h3>
+        <p>White sands and turquoise waters at Diani, Watamu, and the timeless Lamu Island.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎭</div>
+        <h3>Rich Culture</h3>
+        <p>Meet Maasai communities, explore Swahili heritage sites, and experience local traditions.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧗</div>
+        <h3>Adventure Tourism</h3>
+        <p>Hike, cycle, and climb through Hell's Gate, Mount Longonot, and beyond.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🍖</div>
+        <h3>Kenyan Cuisine</h3>
+        <p>Savour nyama choma, ugali, coastal seafood, and aromatic street-side samosas.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="container">
-    <h2>Plan Your Trip Today</h2>
-    <p>
-        Ready to explore Kenya? Browse destinations, view our gallery, or contact us to start planning your journey.
-    </p>
+  <!-- ── CTA STRIP ──────────────────────────────────────────── -->
+  <div class="cta-strip">
+    <h2>Ready to Explore Kenya?</h2>
+    <p>Browse our destinations, walk through the gallery, or reach out and we'll craft your perfect itinerary.</p>
+    <a href="contact.html" class="btn-outline">Plan Your Trip →</a>
+  </div>
 
-    <p>
-        <a href="contact.html">Start Planning →</a>
-    </p>
-</div>
-
-<footer>
-    <p>&copy; 2026 Explore Kenya</p>
-</footer>
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <!-- BUG FIX 6 — footer was a single centered <p> with no links,
+       making navigation from the bottom of a page impossible. -->
+  <footer>
+    <p>© 2026 Explore Kenya</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
 
 </body>
 </html>
